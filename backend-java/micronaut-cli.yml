@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: septier.test.backend
+---
+testFramework: junit
+sourceLanguage: java
