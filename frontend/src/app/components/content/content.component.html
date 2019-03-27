@@ -1,0 +1,18 @@
+<div class="main-container">
+  <div class="header">
+    <ul *ngIf="points" class="info">
+      <li *ngFor="let point of points">
+      <span class="info-item">
+        <strong>Id:</strong> {{point.Id | notAvailable}}
+      </span>
+        <span class="info-item">
+        <strong>RSSI:</strong> {{point.RSSI | notAvailable}}
+      </span>
+        <span class="info-item">
+        <strong>SNR:</strong> {{point.SNR | notAvailable}}
+      </span>
+      </li>
+    </ul>
+  </div>
+  <app-map></app-map>
+</div>
