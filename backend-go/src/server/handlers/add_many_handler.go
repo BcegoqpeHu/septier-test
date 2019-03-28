@@ -5,7 +5,7 @@ import (
 	"github.com/labstack/echo"
 	"log"
 	"net/http"
-	"septier_test_backend/models"
+	"server/models"
 )
 
 func (h *Handler) AddManyHandler(c echo.Context) (err error) {

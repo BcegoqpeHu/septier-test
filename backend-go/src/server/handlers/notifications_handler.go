@@ -4,7 +4,7 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/labstack/echo"
 	"log"
-	"septier_test_backend/sockets"
+	"server/sockets"
 )
 
 var (

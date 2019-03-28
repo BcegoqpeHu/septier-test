@@ -1,6 +1,7 @@
 #!/bin/bash
 
-go get ./...
-export GOPATH=$(pwd):$GOPATH
+export GO111MODULE=on
 
-go build src/septier_test_backend/server.go
+go get -d -v ./...
+#export GOPATH=$(pwd):$GOPATH
+go install -v ./...

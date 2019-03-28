@@ -4,7 +4,7 @@ import (
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 	"github.com/labstack/gommon/log"
-	"septier_test_backend/handlers"
+	"server/handlers"
 )
 
 func main() {
@@ -20,6 +20,8 @@ func main() {
 
 	e.POST("/addmany", h.AddManyHandler)
 	e.GET("/ws", h.NotificationsHandler)
+
+	e.Static("/a", "public")
 
 	e.Logger.Fatal(e.Start(":8080"))
 }

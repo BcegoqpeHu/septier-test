@@ -1,6 +1,8 @@
 package handlers
 
-import "septier_test_backend/sockets"
+import (
+	"server/sockets"
+)
 
 type Handler struct {
 	Hub *sockets.Hub
