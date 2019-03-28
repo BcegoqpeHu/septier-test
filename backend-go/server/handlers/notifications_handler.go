@@ -1,10 +1,10 @@
 package handlers
 
 import (
+	"github.com/BcegoqpeHu/septier-test/backend-go/server/sockets"
 	"github.com/gorilla/websocket"
 	"github.com/labstack/echo"
 	"log"
-	"septier_test_backend/sockets"
 )
 
 var (

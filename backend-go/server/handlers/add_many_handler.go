@@ -2,10 +2,10 @@ package handlers
 
 import (
 	"encoding/json"
+	"github.com/BcegoqpeHu/septier-test/backend-go/server/models"
 	"github.com/labstack/echo"
 	"log"
 	"net/http"
-	"septier_test_backend/models"
 )
 
 func (h *Handler) AddManyHandler(c echo.Context) (err error) {

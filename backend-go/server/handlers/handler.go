@@ -1,6 +1,6 @@
 package handlers
 
-import "septier_test_backend/sockets"
+import "github.com/BcegoqpeHu/septier-test/backend-go/server/sockets"
 
 type Handler struct {
 	Hub *sockets.Hub

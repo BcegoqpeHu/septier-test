@@ -1,10 +1,10 @@
 package main
 
 import (
+	"github.com/BcegoqpeHu/septier-test/backend-go/server/handlers"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 	"github.com/labstack/gommon/log"
-	"septier_test_backend/handlers"
 )
 
 func main() {
@@ -20,6 +20,8 @@ func main() {
 
 	e.POST("/addmany", h.AddManyHandler)
 	e.GET("/ws", h.NotificationsHandler)
+
+	e.Static("/", "public")
 
 	e.Logger.Fatal(e.Start(":8080"))
 }
