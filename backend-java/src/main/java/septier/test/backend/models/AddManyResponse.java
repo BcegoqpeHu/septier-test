@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import septier.test.backend.models.AddManyRequest.Config;
 import septier.test.backend.models.AddManyRequest.Config.CellNetworkParams;
 
+@SuppressWarnings({"WeakerAccess", "unused"})
 public class AddManyResponse {
     public UsrpCfg UsrpCfg;
     public Integer Command;

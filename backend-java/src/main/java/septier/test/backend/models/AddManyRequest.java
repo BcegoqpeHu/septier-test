@@ -2,6 +2,7 @@ package septier.test.backend.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@SuppressWarnings({"WeakerAccess", "unused"})
 public class AddManyRequest {
     public String DftrxId;
     public Config Config;
