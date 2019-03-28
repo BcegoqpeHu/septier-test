@@ -1,2 +1,3 @@
 set GO111MODULE=on
-go get -d -v ./... && go build -o app.exe server/server.go
+call go get -d -v ./...
+call go build -o app.exe server/server.go

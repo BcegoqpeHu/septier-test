@@ -1,2 +1,2 @@
-npm install
-npm run build
+call npm install
+call npm run build
