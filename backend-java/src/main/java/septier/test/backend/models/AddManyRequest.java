@@ -1,6 +1,8 @@
 package septier.test.backend.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 @SuppressWarnings({"WeakerAccess", "unused"})
 public class AddManyRequest {
@@ -33,6 +35,8 @@ public class AddManyRequest {
         public String Url;
         public Double Sound;
 
+        @EqualsAndHashCode
+        @ToString
         public static class CellNetworkParams {
             public Integer Arfcn;
             public Integer Ulsc;

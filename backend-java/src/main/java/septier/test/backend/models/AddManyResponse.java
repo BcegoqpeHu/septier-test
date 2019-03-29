@@ -1,14 +1,22 @@
 package septier.test.backend.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import septier.test.backend.models.AddManyRequest.Config;
 import septier.test.backend.models.AddManyRequest.Config.CellNetworkParams;
 
 @SuppressWarnings({"WeakerAccess", "unused"})
+@EqualsAndHashCode
+@ToString
 public class AddManyResponse {
     public UsrpCfg UsrpCfg;
     public Integer Command;
 
+    @EqualsAndHashCode
+    @NoArgsConstructor
+    @ToString
     public static class UsrpCfg {
         public Integer RxGain;
         public Integer Network;
@@ -46,8 +54,8 @@ public class AddManyResponse {
             this.Watcher = config.Watcher;
             this.Antenna = config.Antenna;
             this.GpsSrc = config.GpsSrc;
-            this.Version = config.Version;
-            this.App = config.App;
+            this.Version = config.Version + 1;
+            this.App = config.App + 1;
         }
     }
 }

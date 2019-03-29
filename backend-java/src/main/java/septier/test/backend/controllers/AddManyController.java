@@ -6,6 +6,7 @@ import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Post;
 import io.micronaut.websocket.WebSocketBroadcaster;
 import io.reactivex.Single;
+import lombok.AllArgsConstructor;
 import septier.test.backend.models.AddManyRequest;
 import septier.test.backend.models.AddManyResponse;
 import septier.test.backend.models.AddManyResponse.UsrpCfg;
@@ -15,13 +16,9 @@ import septier.test.backend.models.WsMessage.WsData;
 import javax.inject.Inject;
 
 @Controller
+@AllArgsConstructor(onConstructor = @__(@Inject))
 public class AddManyController {
     private final WebSocketBroadcaster broadcaster;
-
-    @Inject
-    public AddManyController(WebSocketBroadcaster broadcaster) {
-        this.broadcaster = broadcaster;
-    }
 
     @Post("/addmany")
     public Single<HttpResponse<AddManyResponse>> addMany(@Body AddManyRequest request) {
